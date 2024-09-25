@@ -1,0 +1,17 @@
+{
+    "name": "SHsotao_Banheiro",
+    "version": "1.0.0",
+    "author": "Shafick Cruz",
+    "maintainer": "Shafick Cruz <shafick@outlook.com.br>",
+    "sentence": "Automação da casa de banho.",
+    "paragraph": "Esta aplicação promove e gerencia os recursos de automação da casa de banho.",
+    "category": "Home Automation",
+    "keywords": ["Home Automation", "IoT", "OTA"],
+    "architectures": ["esp32"],
+    "repository": {"type": "git", "url": "https://github.com/ShafickCruz/SHsotao_Banheiro"},
+    "website": "https://github.com/ShafickCruz/SHsotao_Banheiro",
+    "issues": "https://github.com/ShafickCruz/SHsotao_Banheiro/issues",
+    "dependencies": {"SHtools_ESP32_OTA_AP": "git+https://github.com/ShafickCruz/SHtools_ESP32_OTA_AP.git",
+    "mathertel/OneButton":"^2.6.1"}
+  }
+  
