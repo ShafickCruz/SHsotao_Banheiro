@@ -5,6 +5,7 @@ A aplicação `SHsotao_Banheiro` permite a automação de diversas funções da 
 ## Recursos
 
 - **EspNow**: Promova comunicação entre diferentes aplicações de automação dos cômodos sem a necessidade de uma rede wifi intermediária.
+- **SHtools_ESP32_OTA_AP**: Leia a documentação da dependencia para conhecer mais recursos (https://github.com/ShafickCruz/SHtools_ESP32_OTA_AP)
 
 ### Instalação
 
@@ -34,14 +35,17 @@ lib_deps =
 
 #### Dependências
 
-Certifique-se de que as seguintes bibliotecas estão instaladas em seu projeto:
+Certifique-se de que as seguintes bibliotecas estão declaradas como inclusão:
 
 ```
 #include <Arduino.h>
 #include <WiFi.h>
+#include <ElegantOTA.h>
+#include <AsyncTCP.h>
+#include <ESPAsyncWebServer.h>
 #include <esp_now.h>
-#include <SHtools_ESP32_OTA_AP.h>
 #include <OneButton.h>
+#include <SHtools_ESP32_OTA_AP.h>
 ```
 
 ##### Informações Importantes
@@ -57,16 +61,13 @@ void setup() {
 }
 ```
 
-###### Dependências Externas
+###### Flags e parâmetros de Configuração
 
-Certifique-se de que todas as bibliotecas dependentes estão instaladas corretamente. Veja a seção Instalação para mais detalhes.
-
-###### Flags de Configuração
-
-A biblioteca ElegantOTA utilizada em SHtools_ESP32_OTA_AP requer a definição de uma flag específica para ativar o modo assíncrono. As flags necessárias já estão definidas no platformio.ini da biblioteca. Caso experiencie erros relacionados, consulte a documentação de ElegantOTA ou tente adicionar a flag diretamente no arquivo platformio.ini:
+A biblioteca ElegantOTA utilizada em SHtools_ESP32_OTA_AP requer a definição de uma flag específica para ativar o modo assíncrono e um parâmetro específico para garantir compatibilidade que devem estar definidos em platformio.ini. Consulte a documentação de ElegantOTA para mais informações.
 
 ```
 build_flags = -DELEGANT_OTA_ASYNC
+lib_compat_mode = strict
 ```
 
 ###### Comunicação ESP-NOW
