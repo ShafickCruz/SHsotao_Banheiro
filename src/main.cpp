@@ -49,18 +49,19 @@ Desta forma saberá que é uma comunicação oficial para executar o comando 1
 
 /*
 Dependency Graph
-|-- SHtools_ESP32_OTA_AP @ 2.0.0+sha.a1eaf12
+|-- SHtools_ESP32_OTA_AP @ 2.0.0+sha.705441c
 |-- OneButton @ 2.6.1
-|-- Update @ 2.0.0
-|-- WebServer @ 2.0.0
+|-- AsyncTCP @ 3.2.5
+|-- ElegantOTA @ 3.1.5
+|-- ESPAsyncWebServer @ 3.3.1
 |-- WiFi @ 2.0.0
 */
 
 #include <Arduino.h>
-/// #include <WiFi.h>
-/// #include <WiFiClient.h>
-// #include <WebServer.h>
-// #include <Update.h>
+#include <WiFi.h>
+#include <ElegantOTA.h>
+#include <AsyncTCP.h>
+#include <ESPAsyncWebServer.h>
 #include <esp_now.h>
 #include <OneButton.h>
 #include <SHtools_ESP32_OTA_AP.h>
